@@ -24,7 +24,7 @@ app.config(($routeProvider) =>{
     templateUrl: 'partials/home.html',
     controller: 'HomeCtrl'
   })
-  .when('/signin', {
+  .when('/auth', {
     templateUrl: 'partials/auth.html',
     controller: 'AuthCtrl'
   })
