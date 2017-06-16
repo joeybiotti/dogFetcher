@@ -2,9 +2,6 @@
 
 console.log("searchCtrl.js loaded");
 
-app.controller('SearchCtrl', function($scope, $window, SearchTermData){
-
+app.controller('SearchCtrl', function($scope, $window, SearchTermData) {
   $scope.searchText = SearchTermData;
-
-
 });
