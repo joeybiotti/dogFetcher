@@ -27,6 +27,10 @@ app.config(($routeProvider) =>{
   .when('/signin', {
     templateUrl: 'partials/auth.html',
     controller: 'AuthCtrl'
+  })
+  .when('/search', {
+    templateUrl: 'partials/search.html',
+    controller: 'SearchCtrl'
   });
 });
 
