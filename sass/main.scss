@@ -7,7 +7,7 @@ body {
 }
 
 #navbar {
-  background-color: red;
+  background-color: #f1404b;
 }
 
 #navbar {
@@ -17,7 +17,7 @@ body {
 }
 
 footer {
-  background-color: #000;
+  background-color: #5e5e5f;
   color: #fff;
   margin: auto;
   margin-top: 15px;
@@ -40,6 +40,10 @@ footer {
 
 #search{
   display: flex;
+  margin: auto;
+  border: 1.25px solid black;
+  width: 75%;
+  padding: 7%;
 }
 
 #search-bar{

@@ -1,8 +1,7 @@
 # Front End Capstone
 ****
-#### (I'm really bad at coming up with clever names)
 
-***
+Built using `Angular.js` and stuff. As of now, it's a total work in progress.
 
 Checkout out `package.json` for devDependencies. But you already knew that.
 ***
