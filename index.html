@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./lib/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  <title>Capstone Project-- Title TBD</title>
+</head>
+
+<body>
+  <div ng-app="DogRescueApp">
+    <h1>Capstone Title</h1>
+    <div ng-include="'partials/navbar.html'"></div>
+
+    <div ng-view></div>
+
+  <hr />
+
+  <footer>Ignore this. It'll be changed&trade;.</footer>
+  </div>
+</body>
+
+<script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/firebase/firebase.js"></script>
+<!-- <script type="text/javascript" src='./lib/node_modules/petfinder/lib/petfinder.js'></script> -->
+<script type="text/javascript" src="app/app.js"></script>
+
+<!-- FACTORIES  -->
+<script type="text/javascript" src="app/factories/authFactory.js"></script>
+<script type="text/javascript" src="app/factories/dataFactory.js"></script>
+
+<!-- CONTROLLERS -->
+<script type="text/javascript" src="app/controllers/homeCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/navCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/authCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/userViewCtrl.js"></script>
+
+<script src="app/values/pf-creds.js"></script>
+
+
+</html>
