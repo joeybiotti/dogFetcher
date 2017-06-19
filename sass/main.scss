@@ -71,6 +71,7 @@ footer {
 .title {
   text-align: center;
   color: blue;
+  font-style: italic;
 }
 
 #search{
@@ -93,9 +94,11 @@ footer {
 
 .shelter-card{
   text-align: left;
-  margin: 25px;
-  border: 2px solid red;
-  padding: 35px;
-  background-color: darkgrey;
+  margin-top: 15px;
+  margin-left: 12%;
+  margin-right: 12%;
+  border: 1.25px solid grey;
+  padding: 10px;
+  background-color: $card-background;
   color: #000;
 }
