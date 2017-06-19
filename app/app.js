@@ -12,7 +12,7 @@ let isAuth = (AuthFactory) =>
         console.log("real user");
         resolve();
       }else{
-        console.log("fake ass user");
+        console.log("fake user");
         reject();
       }
     });
@@ -31,6 +31,10 @@ app.config(($routeProvider) =>{
   .when('/search', {
     templateUrl: 'partials/search.html',
     controller: 'SearchCtrl'
+  })
+  .when('/shelter', {
+    templateUrl: 'partials/shelter.html',
+    controller: 'ShelterCtrl'
   });
 });
 
