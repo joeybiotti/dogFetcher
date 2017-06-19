@@ -2,13 +2,12 @@
 
 console.log("shelterCtrl.js loaded");
 
-app.controller("ShelterCtrl", function($scope, DataFactory, $routeParams, $location, $window){
-  console.log("ShelterCtrl");
+app.controller("ShelterCtrl", function($scope, DataFactory, $routeParams, $location, $window) {
   DataFactory.findShelter()
-  .then(function(locateShelters){
-    $scope.shelters = locateShelters;
-    console.log("shelters", $scope.shelters);
-    console.log("locateShelters", locateShelters);
-    $location.path('/shelter.html');
-  });
+    .then(function(locateShelters) {
+      $scope.shelters = locateShelters;
+      console.log("shelters", $scope.shelters);
+      console.log("locateShelters", locateShelters);
+      $location.path('/shelter');
+    });
 });
