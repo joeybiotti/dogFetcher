@@ -34,13 +34,19 @@ app.config(($routeProvider) =>{
   });
 });
 
-// app.run(($location, PFCreds)=>{
+app.run(($location, PFCreds, FBCreds)=>{
 
-  // let PFauthConfig = {
-  //   apiKey: PF_creds.apiKey,
-  //   authDomain: PF_creds.authDomain,
-  //   databaseURL: PF_creds.databaseURL
-  // };
+  let PFauthConfig = {
+    apiKey: PFCreds.apiKey,
+    authDomain: PFCreds.authDomain,
+    databaseURL: PFCreds.databaseURL
+  };
 
-//   	// firebase.initializeApp(authConfig);
-// });
+  let FBauthConfig = {
+    apiKey: FBCreds.apiKey,
+    authDomain: FBCreds.authDomain,
+    databaseURL: FBCreds.databaseURL
+  };
+
+  firebase.initializeApp(FBauthConfig);
+});
