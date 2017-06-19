@@ -3,6 +3,9 @@ $white: #f4f5f9;
 $primary-color: #f1404b;
 $card-background: #f2f2f2;
 
+// CARD BORDER
+$card-background: 1.25px solid lightgrey;
+
 
 body {
   background-color: $white;
@@ -36,14 +39,14 @@ footer {
   color: #000;
   margin: auto;
   padding: 10px;
-  border: 3px solid #fff;
+  border: $card-background;
   font-size: 0.75em;
   max-width: 60%;
 }
 
 .pet-card{
   img{
-    box-shadow: 1.25px 1.5px lightgrey;
+    box-shadow: $card-background;
   }
 }
 
@@ -78,18 +81,26 @@ footer {
   display: flex;
   margin: auto;
   background-color: $card-background;
-  border: 1.25px solid black;
+  border: $card-background;
   width: 75%;
   padding: 7%;
 }
 
 #search-bar{
-  width: 70%;
+  width: 75%;
 }
 
-
 .form-group{
-  width: 85%;
+  width: 75%;
+  margin: auto;
+  padding: 8px;
+}
+
+.sign-in-section{
+  border: $card-background;
+  margin: auto;
+  width: 65%;
+  padding: 8px;
 }
 
 .shelter-card{
@@ -97,7 +108,7 @@ footer {
   margin-top: 15px;
   margin-left: 12%;
   margin-right: 12%;
-  border: 1.25px solid grey;
+  border: 1.25px solid lightgrey;
   padding: 10px;
   background-color: $card-background;
   color: #000;
