@@ -35,6 +35,9 @@ app.config(($routeProvider) =>{
   .when('/shelter', {
     templateUrl: 'partials/shelter.html',
     controller: 'ShelterCtrl'
+  }).when('/main', {
+    templateUrl: 'partials/main.html',
+    controller: 'MainCtrl'
   });
 });
 
