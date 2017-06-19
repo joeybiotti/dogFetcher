@@ -1,30 +1,31 @@
 <nav ng-controller="NavCtrl" class="navbar navbar-default" id="navbar">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-        aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Clever Name Will Go Here.</a>
+      <a class="navbar-brand" href="#!/main">Clever Name Will Go Here.</a>
     </div>
 
     <div class="input-group col-xs-6 col-xs-offset-3" ng-show="isLoggedIn">
       <span class="input-group-addon" id="basic-addon1">
         <span class="glyphicon glyphicon-search"></span>
       </span>
-      <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon1"ng-model="searchTerm.search">
+      <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon1" ng-model="searchTerm.search">
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a ng-href="#!/home">Home</a></li>
+        <li><a ng-href="#!/main">Home</a></li>
+        <li><a ng-href="#!/home">Random Dog</a></li>
         <li><a ng-href="#!/search">Find a Dog</a></li>
         <li><a ng-href="#!/shelter">Find a Rescue</a></li>
         <li><a ng-href="#!/auth" ng-show="!isLoggedIn">Login</a></li>
-        <li><a ng-show="isLoggedIn" ng-href="#!/auth">Log Out</a></a></li>
+        <li><a ng-show="isLoggedIn" ng-href="#!/auth">Log Out</a></a>
+        </li>
       </ul>
     </div>
   </div>

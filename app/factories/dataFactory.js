@@ -3,13 +3,11 @@
 console.log("dataFactory.js loaded");
 
 app.factory('DataFactory', function($q, $http, PFCreds){
-console.log("pfcreds", PFCreds);
 
   const findRandomDog = (dogObj) =>{
     return $q((resolve, reject) =>{
       $http.get(`${PFCreds.randomDogUrl}`)
       .then((response)=>{
-        console.log("response", response);
         resolve(response);
       })
       .catch((error)=>{
