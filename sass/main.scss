@@ -29,6 +29,7 @@ body {
 footer {
   background-color: $primary-color;
   color: #fff;
+  text-align: center;
   margin: auto;
   margin-top: 15px;
   padding: 5px;
@@ -69,13 +70,14 @@ footer {
   .k9img{
     margin-left: 4.75em;
     margin-right: 4.75em;
+    box-shadow: 1.25px 1.75px lightgrey;
   }
 }
 
 .title {
   text-align: center;
-  color: blue;
-  font-style: italic;
+  color: grey;
+  text-shadow: 1px 0.5px #000;
 }
 
 #search{
