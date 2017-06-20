@@ -38,6 +38,9 @@ app.config(($routeProvider) =>{
   }).when('/main', {
     templateUrl: 'partials/main.html',
     controller: 'MainCtrl'
+  }).when('/records', {
+    templateUrl: 'partials/records.html',
+    controller: 'RecordsCtrl'
   });
 });
 
