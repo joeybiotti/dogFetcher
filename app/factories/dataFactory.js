@@ -2,7 +2,9 @@
 
 console.log("dataFactory.js loaded");
 
-app.factory('DataFactory', function($q, $http, PFCreds) {
+app.factory('DataFactory', function($q, $http, PFCreds, FBCreds) {
+
+// FUNCTIONS TO RETURN PETS
 
   const findRandomDog = (dogObj) => {
     return $q((resolve, reject) => {
@@ -40,9 +42,24 @@ app.factory('DataFactory', function($q, $http, PFCreds) {
     });
   };
 
+//FUNCTIONS TO ADD PETS TO USER'S FIREBASE
+
+  const addPet = (petObj) => {
+    return $q((resolve, reject) =>{
+      $http.post(`${FBCreds.databaseURL}`, petObj)
+      .then((petID) =>{
+        resolve(petID);
+      })
+      .catch((error)=>{
+        reject(error);
+      });
+    });
+  };
+
   return {
     findRandomDog,
     findShelter,
-    getShelterRecs
+    getShelterRecs,
+    addPet
   };
 });
