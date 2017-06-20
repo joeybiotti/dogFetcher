@@ -113,3 +113,19 @@ footer {
   background-color: $card-background;
   color: #000;
 }
+
+.btn-link{
+  color: white;
+}
+
+.btn-link{
+  a:hover{
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.btn-link:hover{
+  color: white;
+  text-decoration: none;
+}
