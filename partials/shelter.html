@@ -1,4 +1,4 @@
-<h3 class="title">Shelter</h3>
+<h3 class="title">Local Shelters</h3>
 
 <div ng-repeat="obj in shelters" class="shelter-card">
   <h4>{{obj.name.$t}}</h4>
@@ -9,6 +9,12 @@
   <h6>{{obj.phone.$t}}</h6>
   <br />
   <p><a href="{{obj.email.$t}}">{{obj.email.$t}}</a></p>
-  <button class="btn btn-info">Contact Rescue</button>
-  <button class="btn btn-info"><a class="btn-link" href="/#!/records">See What's Available</a></button>
+  <button ng-click="btnFunc" class="btn btn-info" aria-label="Left Align">
+    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+    Contact Shelter!
+  </button>
+  <button id="btn-link" class="btn btn-info" aria-label="Left Align" >
+    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    <a href="/#!/records">See What's Available!</a>
+  </button>
 </div>
