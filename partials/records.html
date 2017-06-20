@@ -1,6 +1,9 @@
 <h3 class="title">Shelter Records</h3>
 
-<div ng-repeat="obj in pets" class="shelter-card">
-  <h5>{{data.petfinder.pets.pet.name.$t}}</h5>
-  <p>{{petfinder.pets.pet.description.$t}}</p>
+<div ng-repeat="obj in petRec" class="shelter-card">
+  <h5>{{obj.name.$t}}</h5>
+  <img class="k9img" src={{obj.media.photos.photo[3].$t}}/>
+  <p>{{obj.description.$t}}</p>
 </div>
+
+<!-- ONLY WORKS FOR MCAR AS OF NOW. -->
