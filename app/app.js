@@ -2,7 +2,7 @@
 
 console.log("app.js");
 
-const app = angular.module('DogRescueApp', ["ngRoute"]);
+const app = angular.module('DogRescueApp', ['ngRoute', 'ui.bootstrap']);
 
 let isAuth = (AuthFactory) =>
   new Promise(function(resolve, reject) {
