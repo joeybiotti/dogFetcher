@@ -10,16 +10,6 @@ app.controller('AuthCtrl', function($scope, AuthFactory, $window, $location) {
     password: ""
   };
 
-  let logout = () => {
-    console.log("logout clicked");
-    AuthFactory.logoutUser()
-      .then(function(data) {
-        console.log("logged out?", data);
-        $window.location.url = "#!/home";
-      }, function(error) {
-        console.log("error occured on logout");
-      });
-  };
   $scope.login = () => {
     console.log("you clicked login");
     AuthFactory

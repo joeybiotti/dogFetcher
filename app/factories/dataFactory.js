@@ -46,7 +46,7 @@ app.factory('DataFactory', function($q, $http, PFCreds, FBCreds) {
 
   const addPet = (petObj) => {
     return $q((resolve, reject) =>{
-      $http.post(`${FBCreds.databaseURL}`, petObj)
+      $http.post(`${FBCreds.databaseURL}.json`, petObj)
       .then((petID) =>{
         resolve(petID);
       })
@@ -56,10 +56,23 @@ app.factory('DataFactory', function($q, $http, PFCreds, FBCreds) {
     });
   };
 
+  const removePet = (petID) =>{
+    return $q((resolve, reject) =>{
+      $http.delete(`${FBCreds.databaseURL}.json`, petID)
+      .then((response) =>{
+        resolve(response);
+      })
+      .catch((error) =>{
+        reject(error);
+      });
+    });
+  };
+
   return {
     findRandomDog,
     findShelter,
     getShelterRecs,
-    addPet
+    addPet,
+    removePet
   };
 });
