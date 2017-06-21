@@ -44,9 +44,10 @@ app.factory('DataFactory', function($q, $http, PFCreds, FBCreds) {
 
 //FUNCTIONS TO ADD PETS TO USER'S FIREBASE
 
-  const addPet = (petObj) => {
+  const addPet = (dogObj) => {
     return $q((resolve, reject) =>{
-      $http.post(`${FBCreds.databaseURL}.json`, petObj)
+      console.log("pets 222", dogObj);
+      $http.post(`${FBCreds.databaseURL}/dogs.json`, dogObj)
       .then((petID) =>{
         resolve(petID);
       })
@@ -58,7 +59,7 @@ app.factory('DataFactory', function($q, $http, PFCreds, FBCreds) {
 
   const removePet = (petID) =>{
     return $q((resolve, reject) =>{
-      $http.delete(`${FBCreds.databaseURL}.json`, petID)
+      $http.delete(`${FBCreds.databaseURL}/dogs.json`, petID)
       .then((response) =>{
         resolve(response);
       })
