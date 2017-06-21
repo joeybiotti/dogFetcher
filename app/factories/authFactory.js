@@ -24,7 +24,7 @@ let loginUser = function(userObj) {
 };
 
 
-let logoutUser = function(){
+let logout = function(){
     console.log("logoutUser");
     return firebase.auth().signOut();
 };
@@ -65,7 +65,7 @@ if(user !==  null){
 
 console.log("user name", name + "user uid", uid);
 
-return {createUser, loginUser, logoutUser, isAuthenticated, getUser, authWithProvider};
+return {createUser, loginUser, logout, isAuthenticated, getUser, authWithProvider};
 
 
 });
