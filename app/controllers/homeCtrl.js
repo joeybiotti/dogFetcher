@@ -20,9 +20,12 @@ app.controller('HomeCtrl', function($scope, DataFactory, AuthFactory, $routePara
     .then(function(petCollection) {
       let pets = petCollection.data.petfinder.pet;
       $scope.myCurrentDog.name = pets.name.$t;
+      $scope.myCurrentDog.img = pets.media.photos.photo[2].$t;
       $scope.myCurrentDog.breed = pets.breeds.breed.$t;
       $scope.myCurrentDog.sex = pets.sex.$t;
       $scope.myCurrentDog.description = pets.description.$t;
+      $scope.myCurrentDog.city = pets.contact.city.$t;
+      $scope.myCurrentDog.state = pets.contact.state.$t;
       console.log("pets", $scope.pets);
       $location.path("/home");
     });

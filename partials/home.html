@@ -3,7 +3,7 @@
 <div class="pet-card">
   <h1>{{myCurrentDog.name}}</h1>
   <hr />
-  <img class="k9img" src={{pets.media.photos.photo[2].$t}} />
+  <img class="k9img" src={{myCurrentDog.img}} />
 
   <!-- <img id="k9img" src={{pets.data.petfinder.pet.media.photos.photo[0].$t}} /> -->
 
@@ -11,7 +11,7 @@
   <h4>Breed: {{myCurrentDog.breed}}</h4>
   <h5>Sex: {{myCurrentDog.sex}}</h5>
   <p>{{myCurrentDog.description}}</p>
-  <p id="loc-text">Location: {{pets.contact.city.$t}}, {{pets.contact.state.$t}} </p>
+  <p id="loc-text">Location: {{myCurrentDog.city}}, {{myCurrentDog.state}} </p>
   <button ng-click="btnFunc" class="btn btn-info" aria-label="Left Align">
     <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
     Contact Shelter!
