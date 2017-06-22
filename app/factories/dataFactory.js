@@ -69,16 +69,30 @@ app.factory('DataFactory', function($q, $http, PFCreds, FBCreds) {
     });
   };
 
-  const usersDogs = (dogs) => {
-    return $q((resolve, reject) =>{
-      $http.get(`${FBCreds.databaseURL}/dogs.json`, dogs)
-      .then((resposne) =>{
-        resolve(resposne);
-      })
-      .catch((error) =>{
-        reject(error);
-      });
+  // const usersDogs = (addedDogs) => {
+  //   return $q((resolve, reject) =>{
+  //       console.log("addedDogs", addedDogs);
+  //     $http.get(`${FBCreds.databaseURL}/dogs.json`, addedDogs)
+  //     .then((resposne) =>{
+  //       resolve(resposne);
+  //     })
+  //     .catch((error) =>{
+  //       reject(error);
+  //     });
+  //   });
+  // };
+
+  const profileDogs = (usersDogs) =>{
+    return $q ((resolve, reject) =>{
+    console.log("usersDogs 123", usersDogs);
+    $http.get(`${FBCreds.databaseURL}/dogs.json`, usersDogs)
+    .then((resposne) =>{
+      resolve(resposne);
+    })
+    .catch((error) =>{
+      reject(error);
     });
+  });
   };
 
   return {
@@ -87,6 +101,6 @@ app.factory('DataFactory', function($q, $http, PFCreds, FBCreds) {
     getShelterRecs,
     addPet,
     removePet,
-    usersDogs
+    profileDogs
   };
 });
