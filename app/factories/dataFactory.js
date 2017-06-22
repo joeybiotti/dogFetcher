@@ -69,11 +69,24 @@ app.factory('DataFactory', function($q, $http, PFCreds, FBCreds) {
     });
   };
 
+  const usersDogs = (dogs) => {
+    return $q((resolve, reject) =>{
+      $http.get(`${FBCreds.databaseURL}/dogs.json`, dogs)
+      .then((resposne) =>{
+        resolve(resposne);
+      })
+      .catch((error) =>{
+        reject(error);
+      });
+    });
+  };
+
   return {
     findRandomDog,
     findShelter,
     getShelterRecs,
     addPet,
-    removePet
+    removePet,
+    usersDogs
   };
 });
