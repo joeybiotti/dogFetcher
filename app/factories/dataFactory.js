@@ -69,19 +69,6 @@ app.factory('DataFactory', function($q, $http, PFCreds, FBCreds) {
     });
   };
 
-  // const usersDogs = (addedDogs) => {
-  //   return $q((resolve, reject) =>{
-  //       console.log("addedDogs", addedDogs);
-  //     $http.get(`${FBCreds.databaseURL}/dogs.json`, addedDogs)
-  //     .then((resposne) =>{
-  //       resolve(resposne);
-  //     })
-  //     .catch((error) =>{
-  //       reject(error);
-  //     });
-  //   });
-  // };
-
   const profileDogs = (usersDogs) =>{
     return $q ((resolve, reject) =>{
     console.log("usersDogs 123", usersDogs);
