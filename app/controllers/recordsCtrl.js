@@ -3,6 +3,7 @@
 console.log("recordsCtrl.js loaded");
 
 app.controller("RecordsCtrl", function($scope, DataFactory, $routeParams, $location, $window) {
+
   DataFactory.getShelterRecs()
     .then(function(getRecords) {
       $scope.petRec = getRecords.data.petfinder.pets.pet;
