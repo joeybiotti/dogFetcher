@@ -41,6 +41,9 @@ app.config(($routeProvider) =>{
   }).when('/records', {
     templateUrl: 'partials/records.html',
     controller: 'RecordsCtrl'
+  }).when('/profile', {
+    templateUrl: 'partials/profile.html',
+    controller: 'ProfileCtrl'
   });
 });
 
