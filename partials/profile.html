@@ -1,10 +1,11 @@
 <h3 class="title">User Profile</h3>
   <div  ng-repeat="dog in savedDogs" class="shelter-card">
-    <h4>Name:{{dogs.name}}</h4>
+    <h4>Name: {{dog.name}}</h4>
+    <img class="k9img" src ="{{dog.img}}"
     <hr />
-    <h6>Breed: {{dog.breed}}</h6>
-    <h6>Location: {{dogs.breed}}</h6>
-    <p>Bio:{{dogs.data.description}}</p>
+    <h6>Breed: {{dog.breeds.breed}}</h6>
+    <h6>Location: {{dog.city}}, {{dog.state}}</h6>
+    <p>Bio:{{dog.description}}</p>
     <button type="button" class="btn btn-success">
       <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
     </button>
