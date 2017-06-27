@@ -15,9 +15,8 @@ app.controller('ProfileCtrl', function($scope, DataFactory, AuthFactory, $locati
 
   DataFactory.profileDogs()
   .then(function(showDogs){
-    $scope.savedDogs = showDogs;
+    $scope.savedDogs = showDogs.data;
     console.log("$scope.savedDogs", $scope.savedDogs);
     console.log("showDogs", showDogs);
   });
-
 });
