@@ -19,4 +19,14 @@ app.controller('ProfileCtrl', function($scope, DataFactory, AuthFactory, $locati
     console.log("$scope.savedDogs", $scope.savedDogs);
     console.log("showDogs", showDogs);
   });
+
+  $scope.remove = function(dog){
+    DataFactory.removePet(dog)
+    .then(function(minusDog){
+      $scope.newProfileDogs = minusDog.data;
+      console.log("$scope.newProfileDogs", $scope.newProfileDogs);
+    });
+    console.log("remove btn clicked");
+  };
+
 });
