@@ -1,6 +1,6 @@
 <h3 class="title">User Profile</h3>
   <div  ng-repeat="dog in savedDogs" class="shelter-card">
-    <h4>Name: {{dog.name}}</h4>
+    <h4 class="name" id="profile-name">{{dog.name}}</h4>
     <img class="k9img" src ="{{dog.img}}"
     <hr />
     <h6>Breed: {{dog.breeds.breed}}</h6>
