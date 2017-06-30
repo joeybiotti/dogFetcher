@@ -57,18 +57,6 @@ app.factory('DataFactory', function($q, $http, PFCreds, FBCreds) {
     });
   };
 
-  const removePet = (petID) =>{
-    return $q((resolve, reject) =>{
-      $http.delete(`${FBCreds.databaseURL}/dogs.json`, petID)
-      .then((response) =>{
-        resolve(response);
-      })
-      .catch((error) =>{
-        reject(error);
-      });
-    });
-  };
-
   const profileDogs = (usersDogs) =>{
     return $q ((resolve, reject) =>{
     console.log("usersDogs 123", usersDogs);
@@ -80,7 +68,32 @@ app.factory('DataFactory', function($q, $http, PFCreds, FBCreds) {
       reject(error);
     });
   });
+};
+
+  // const removePet = (dog) =>{
+  //   return $q((resolve, reject) =>{
+  //     $http.delete(`${FBCreds.databaseURL}/dogs/${dog}/.json`, dog)
+  //     .then((response) =>{
+  //       resolve(response);
+  //     })
+  //     .catch((error) =>{
+  //       reject(error);
+  //     });
+  //   });
+  // };
+
+  const removePet = (dogID) => {
+    return $q((resolve, reject) =>{
+      $http.delete(`${FBCreds.databaseURL}/dogs/${dogID}/.json`)
+      .then((response) =>{
+        resolve(response);
+      })
+      .catch((error) =>{
+        reject(error);
+      });
+    });
   };
+
 
   return {
     findRandomDog,
