@@ -20,13 +20,21 @@ app.controller('ProfileCtrl', function($scope, DataFactory, AuthFactory, $locati
     console.log("showDogs", showDogs);
   });
 
-  $scope.remove = function(dog){
-    DataFactory.removePet(dog)
-    .then(function(minusDog){
-      $scope.newProfileDogs = minusDog.data;
-      console.log("$scope.newProfileDogs", $scope.newProfileDogs);
+  // $scope.remove = function(dog){
+  //   DataFactory.removePet(dog)
+  //   .then(function(minusDog){
+  //     $scope.savedDogs = minusDog.data;
+  //     console.log("$scope.savedDogs", $scope.savedDogs);
+  //   });
+  //   console.log("remove btn clicked");
+  // };
+
+  $scope.remove = function(fido){
+    DataFactory.removePet(fido)
+    .then((response) =>{
+      console.log("response", response);
+      $scope.profileDogs();
     });
-    console.log("remove btn clicked");
   };
 
 });
