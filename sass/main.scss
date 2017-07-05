@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 
 // COLORS
 $white: #f4f5f9;
@@ -10,7 +12,8 @@ $card-background: #f2f2f2;
 $card-border: 1.25px solid lightgrey;
 
 // FONTS
-$logo-font: 'Orbitron', sans-serif;
+$logo-font: 'Walter Turncoat', cursive;
+$body-font: 'Roboto', sans-serif;
 
 body {
   background-color: $white;
@@ -41,6 +44,7 @@ body {
   a {
     color: $white;
     text-shadow: 0.5px 0.25px $black;
+    font-family: $logo-font;
   }
 }
 
@@ -103,21 +107,8 @@ footer {
   text-align: center;
   color: grey;
   text-shadow: 1px 0.5px #000;
+  font-family: $logo-font;
 }
-
-// #search{
-//   display: flex;
-//   margin: auto;
-//   background-color: $card-background;
-//   border-radius: 1%;
-//   border: $card-border;
-//   width: 75%;
-//   padding: 7%;
-// }
-//
-// #search-bar{
-//   width: 75%;
-// }
 
 .form-group{
   width: 75%;
@@ -145,6 +136,11 @@ footer {
   color: #000;
 }
 
+.shelter-name{
+  font-family: $logo-font;
+  color: $primary-color;
+}
+
 .shelter-card{
   img{
     margin-left: 15%;
@@ -152,6 +148,22 @@ footer {
     box-shadow: 0.12em 0.2em lightgrey;
   }
 }
+
+.bio{
+  font-family: $body-font;
+}
+
+#records-name{
+  font-family: $logo-font;
+  color: $primary-color;
+  text-align: center;
+}
+
+#records-img{
+  margin-left: 10em;
+  margin-bottom: 3.25em;
+}
+
 
 #btn-link{
   a{
@@ -169,4 +181,35 @@ footer {
 #btn-link:hover{
   color: white;
   text-decoration: none;
+}
+
+#email-area{
+  width: 50em;
+  height: 15em;
+  margin-left: 11em;
+  border-radius: 1%;
+}
+
+#subject-line{
+  width: 50em;
+  height: 1.75em;
+  margin-left: 11em;
+  border-radius: 3%;
+}
+
+#email-btns{
+  float: right;
+  margin-right: 9em;
+  margin-top: 0.25em;
+}
+
+#to-line{
+  width: 50em;
+  height: 1.5em;
+  margin-left: 11em;
+  border-radius: 2%;
+}
+
+#next-btn{
+  margin-left: 30%;
 }

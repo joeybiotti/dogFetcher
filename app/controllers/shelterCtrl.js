@@ -10,4 +10,10 @@ app.controller("ShelterCtrl", function($scope, DataFactory, $routeParams, $locat
       console.log("locateShelters", locateShelters);
       $location.path('/shelter');
     });
+
+    $scope.sendEmail = function(){
+      console.log("email btn clicked");
+      $location.path('/contact');
+    };
+
 });
