@@ -39,6 +39,12 @@ app.controller('HomeCtrl', function($scope, DataFactory, AuthFactory, $routePara
         $location.path("/home");
       });
     console.log("add to list btn clicked");
-
   };
+
+
+  $scope.sendEmail = function(){
+    console.log("email btn clicked");
+    $location.path('/contact');
+  };
+
 });

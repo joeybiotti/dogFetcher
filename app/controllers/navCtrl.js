@@ -38,5 +38,4 @@ app.controller('NavCtrl', function($scope, $window, AuthFactory){
         });
     };
 
-
 });

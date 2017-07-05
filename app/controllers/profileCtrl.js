@@ -15,26 +15,29 @@ app.controller('ProfileCtrl', function($scope, DataFactory, AuthFactory, $locati
 
   DataFactory.profileDogs()
   .then(function(showDogs){
-    $scope.savedDogs = showDogs.data;
+    $scope.savedDogs = showDogs;
     console.log("$scope.savedDogs", $scope.savedDogs);
     console.log("showDogs", showDogs);
   });
 
-  // $scope.remove = function(dog){
-  //   DataFactory.removePet(dog)
-  //   .then(function(minusDog){
-  //     $scope.savedDogs = minusDog.data;
-  //     console.log("$scope.savedDogs", $scope.savedDogs);
-  //   });
-  //   console.log("remove btn clicked");
-  // };
+  $scope.sendEmail = function(){
+    console.log("email btn clicked");
+    $location.path('/contact');
+  };
 
-  $scope.remove = function(fido){
-    DataFactory.removePet(fido)
-    .then((response) =>{
-      console.log("response", response);
-      $scope.profileDogs();
+
+  $scope.remove = function(dog){
+    console.log("$scope.savedDogs", $scope.savedDogs);
+    DataFactory.removePet(dog)
+    .then(function(){
+      DataFactory.profileDogs()
+      .then(function(newList){
+        $scope.savedDogs = newList;
+      });
+      console.log("$scope.savedDogs", $scope.savedDogs);
     });
+      console.log("remove btn clicked");
+      let profileDogs =  $scope.savedDogs;
   };
 
 });

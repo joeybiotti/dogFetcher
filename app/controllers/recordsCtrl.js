@@ -11,4 +11,9 @@ app.controller("RecordsCtrl", function($scope, DataFactory, $routeParams, $locat
       console.log("getShelterRecs", getRecords);
       $location.path('/records');
     });
+
+    $scope.sendShelterEmail = function(){
+      console.log("email btn clicked");
+      $location.path('/contact');
+    };
 });

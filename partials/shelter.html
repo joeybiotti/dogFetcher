@@ -1,7 +1,7 @@
 <h3 class="title">Local Shelters</h3>
 
 <div ng-repeat="obj in shelters" class="shelter-card">
-  <h4>{{obj.name.$t}}</h4>
+  <h4 class="shelter-name">{{obj.name.$t}}</h4>
   <hr />
   <h6>{{obj.address1.$t}}</h6>
   <h6>{{obj.city.$t}}, {{obj.state.$t}}</h6>
@@ -9,7 +9,7 @@
   <h6>{{obj.phone.$t}}</h6>
   <br />
   <p><a href="{{obj.email.$t}}">{{obj.email.$t}}</a></p>
-  <button ng-click="btnFunc" class="btn btn-info" aria-label="Left Align">
+  <button ng-click="sendEmail();" class="btn btn-info" aria-label="Left Align">
     <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
     Contact Shelter!
   </button>

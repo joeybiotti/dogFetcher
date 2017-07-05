@@ -46,7 +46,7 @@ app.factory('DataFactory', function($q, $http, PFCreds, FBCreds) {
 
   const addPet = (dogObj) => {
     return $q((resolve, reject) =>{
-      console.log("pets 222", dogObj);
+      console.log("add pets", dogObj);
       $http.post(`${FBCreds.databaseURL}/dogs.json`, dogObj)
       .then((petID) =>{
         resolve(petID);
@@ -58,29 +58,26 @@ app.factory('DataFactory', function($q, $http, PFCreds, FBCreds) {
   };
 
   const profileDogs = (usersDogs) =>{
+    let profileDogs = [];
     return $q ((resolve, reject) =>{
     console.log("usersDogs 123", usersDogs);
     $http.get(`${FBCreds.databaseURL}/dogs.json`, usersDogs)
-    .then((resposne) =>{
-      resolve(resposne);
+    .then((response) =>{
+      let dogs = response.data;
+      console.log(response);
+      Object.keys(dogs).forEach((key) => {
+               dogs[key].id = key;
+               profileDogs.push(dogs[key]);
+               console.log(dogs, "this is items");
+           });
+           console.log("profile dogs", profileDogs);
+      resolve(profileDogs);
     })
     .catch((error) =>{
       reject(error);
     });
   });
 };
-
-  // const removePet = (dog) =>{
-  //   return $q((resolve, reject) =>{
-  //     $http.delete(`${FBCreds.databaseURL}/dogs/${dog}/.json`, dog)
-  //     .then((response) =>{
-  //       resolve(response);
-  //     })
-  //     .catch((error) =>{
-  //       reject(error);
-  //     });
-  //   });
-  // };
 
   const removePet = (dogID) => {
     return $q((resolve, reject) =>{

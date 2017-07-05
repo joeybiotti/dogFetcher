@@ -28,22 +28,25 @@ app.config(($routeProvider) =>{
     templateUrl: 'partials/auth.html',
     controller: 'AuthCtrl'
   })
-  .when('/search', {
-    templateUrl: 'partials/search.html',
-    controller: 'SearchCtrl'
-  })
   .when('/shelter', {
     templateUrl: 'partials/shelter.html',
     controller: 'ShelterCtrl'
-  }).when('/main', {
+  })
+  .when('/main', {
     templateUrl: 'partials/auth.html',
     controller: 'AuthCtrl'
-  }).when('/records', {
+  })
+  .when('/records', {
     templateUrl: 'partials/records.html',
     controller: 'RecordsCtrl'
-  }).when('/profile', {
+  })
+  .when('/profile', {
     templateUrl: 'partials/profile.html',
     controller: 'ProfileCtrl'
+  })
+  .when('/contact',{
+    templateUrl: 'partials/contact.html',
+    controller: 'ContactCtrl'
   });
 });
 
