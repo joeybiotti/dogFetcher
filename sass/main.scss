@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
+@import url('https://fonts.googleapis.com/css?family=Finger+Paint');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Freckle+Face');
+
 
 
 // COLORS
@@ -12,8 +14,9 @@ $card-background: #f2f2f2;
 $card-border: 1.25px solid lightgrey;
 
 // FONTS
-$logo-font: 'Walter Turncoat', cursive;
+$logo-font: 'Freckle Face', cursive;
 $body-font: 'Roboto', sans-serif;
+$misc-font: 'Finger Paint', cursive;
 
 body {
   background-color: $white;
@@ -26,7 +29,9 @@ body {
 #navbar {
   background-color: $primary-color;
   padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
   border-bottom: 1px solid $black;
+  width: 100%;
 }
 
 .name{
@@ -44,13 +49,14 @@ body {
   a {
     color: $white;
     text-shadow: 0.5px 0.25px $black;
-    font-family: $logo-font;
+    text-decoration: none;
+    font-family: $misc-font;
+    align-content: stretch;
   }
 }
 
 #logo{
-  padding: auto;
-  margin-left: 1.75em;
+  padding: 1.2em;
 }
 
 footer {
@@ -186,30 +192,36 @@ footer {
 #email-area{
   width: 50em;
   height: 15em;
-  margin-left: 11em;
+  margin-left: 20em;
   border-radius: 1%;
 }
 
 #subject-line{
   width: 50em;
   height: 1.75em;
-  margin-left: 11em;
+  margin-left: 20em;
   border-radius: 3%;
 }
 
 #email-btns{
-  float: right;
-  margin-right: 9em;
+  margin-right: 18em;
   margin-top: 0.25em;
+}
+
+#email-send{
+  float: right;
+  margin: auto;
+}
+
+#email-cancel{
+  float: right;
+  margin: auto;
 }
 
 #to-line{
   width: 50em;
   height: 1.5em;
-  margin-left: 11em;
+  margin-bottom: 0.25em;
+  margin-left: 20em;
   border-radius: 2%;
-}
-
-#next-btn{
-  margin-left: 30%;
 }
