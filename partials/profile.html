@@ -1,12 +1,13 @@
-<h3 class="title">Your Profile</h3>
+<!-- <h3 class="title">Your Profile</h3> -->
 
 
 <div ng-repeat="dog in savedDogs" class="shelter-card">
   <h4 class="name" id="profile-name">{{dog.name}}</h4>
   <img class="k9img" src="{{dog.img}}" <hr />
-  <h6>Breed: {{dog.breeds.breed}}</h6>
-  <h6>Location: {{dog.city}}, {{dog.state}}</h6>
-  <p>Bio:{{dog.description}}</p>
+  <!-- <h6>Breed: {{dog.breeds.breed}}</h6>
+  <h6>Location: {{dog.city}}, {{dog.state}}</h6> -->
+  <hr />
+  <p>{{dog.description}}</p>
   <button ng-click="sendEmail()" type="button" class="btn btn-success">
       <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
       Contact Shelter
