@@ -1,6 +1,11 @@
-# Dog Fetcher
+# DogFetcher
 ### Front End Capstone Project
-***
-Using the Petfinder.com API, Dog Fetcher allows users to find and select rescue dogs. The data is randomly generated, similar to a certain dating app, but the user is able to save a dog that they like to a profile. Contact information for each shelter is provided, as well as a list of the top 25 local shelters (local means Nashville, TN). Users will also able to email directly from the app, but the functionality has been disabled for the sake of the demo... I don't want random emails being sent all over the place.
+#### Joey Biotti
 
-See `package.json` for all necessary dependencies and make sure you run the `Gruntfile.js` before you get things going.
+***
+
+DogFetcher utilizes the Petfinder.com API to randomly generate shelter/rescue dogs available for adoption through the United States. Additionally, users are able to show a list of up to 25 shelters/rescue organizations in the Nashville, TN area. From the shelter listings, users are able to see available pets.
+
+Please note, when shelter records are called _all animal types_ will be displayed. The Petfinder.com API does not allow for shelter records to be filtered by animal type. Additionally, since the URLs require each unique shelter ID,  all links to shelter records will take the user to Music City Animal Rescue's listings. This was only done for the sake to the demo. Lastly, there is no Email/contact functionality. The text box and buttons are placeholders. Both the email functionality and unique URLs will be addressed/resolved in Version 2.
+
+DogFetcher is built using AngularJS, Bootstrap, Firebase and Sass. Please see `package.json` for all necessary dependencies.  
