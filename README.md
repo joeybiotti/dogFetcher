@@ -37,12 +37,12 @@ ___
 ### __What Technologies Does DogFetcher Use?__
 
 DogFetcher was built using the following:
-[AngularJS](https://angularjs.org/)
-[Sass](http://sass-lang.com/)
-[npm](https://www.npmjs.com/)
-[Grunt](https://gruntjs.com/) 
-[Bootstrap](https://getbootstrap.com)
-[Firebase](https://firebase.google.com/)
+* [AngularJS](https://angularjs.org/)
+* [Sass](http://sass-lang.com/)
+* [npm](https://www.npmjs.com/)
+* [Grunt](https://gruntjs.com/) 
+* [Bootstrap](https://getbootstrap.com)
+* [Firebase](https://firebase.google.com/)
 ___
 ### __Issues__
 If you come across any bugs, feel free to open an issue on [github](https://github.com/joeybiotti/dogFetcher/issues) or send me an [email](mailto:joeybiotti4@gmail.com)
