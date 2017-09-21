@@ -25,7 +25,7 @@ ___
 3. You'll need a [Petfinder.com](https://www.petfinder.com) API key in order to run the app. Do get one, do the following:
     __i.__ Go to [Petfinder.com's Developer Site] ](https://www.petfinder.com/developers/api-key) and register for an API key.
         __ii.__ Once you've registered the app, make sure you register ```http://localhost:8080/login.html``` as the domain name to prevent CORS errors.
-        __iii.__ In the ```app/values/creds``` directory, open the file ```pf-creds.js`` and enter the unique API Key provided to you by Petfinder.com.
+        __iii.__ In the ```app/values/creds``` directory, open the file ```pf-creds.js``` and enter the unique API Key provided to you by Petfinder.com.
 4. In order to fully utilize DogFetcher's ability to save dogs to your profile, you'll need to set up a Firebase project. In order to do that, you'll need to:
         __i.__ Visit the [Firebase](https://firebase.google.com) and follow the instructions on setting up a new project. 
         __ii.__ Once youve created a firebase project, head to the console (the url should look something like console.firebase.google.com/project/YOUR_PROJECTNAME) and click on the "Add Firebase To Your Web App" button. 
